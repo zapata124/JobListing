@@ -55,9 +55,6 @@ const PasswordInput: React.FC<InputProps> = ({ register, type }) => {
   );
 };
 
-const UserInfoInput: React.FC<InputProps> = ({ register, type }) => {
-  return <TextField required fullWidth label={type} {...register(type)} />;
-};
 const SignUpForm: React.FC = () => {
   const { register, handleSubmit } = useForm();
   const submit = (data: FieldValues) => {
@@ -76,7 +73,9 @@ const SignUpForm: React.FC = () => {
         }}
       >
         {userInfoFields.map((field: string) => {
-          return <UserInfoInput register={register} type={field} />;
+          return (
+            <TextField required fullWidth label={field} {...register(field)} />
+          );
         })}
         {passwordLabels.map((label: string) => {
           return <PasswordInput register={register} type={label} />;
