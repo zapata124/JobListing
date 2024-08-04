@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import SignUpPage from "../pages/SignUp";
 import App from "../App";
+import SignInPage from "../pages/SingIn";
 const routes: RouteObject[] = [
   {
     path: "/",
@@ -8,7 +9,7 @@ const routes: RouteObject[] = [
     children: [
       {
         path: "/signin",
-        element: <div>sign in</div>,
+        element: <SignInPage />,
       },
       {
         path: "/signup",
