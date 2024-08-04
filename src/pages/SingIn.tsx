@@ -2,16 +2,15 @@ import AuthCard from "../components/AuthCard";
 import AppForm from "../components/AppForm";
 
 const SignInPage: React.FC = () => {
-  const userSingUp = (data: any) => {
-    console.log("fsdsfsdf", data);
+  const userSignIn = (data: any) => {
+    console.log(data);
   };
-  5;
   return (
     <AuthCard title={"Sign In"}>
       <AppForm
         credentialFields={["Email"]}
         authenticationFields={["Password"]}
-        submit={userSingUp}
+        submit={userSignIn}
       />
     </AuthCard>
   );

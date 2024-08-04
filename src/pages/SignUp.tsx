@@ -3,7 +3,7 @@ import AppForm from "../components/AppForm";
 
 const SignUpPage: React.FC = () => {
   const userSingUp = (data: any) => {
-    console.log("sss", data);
+    console.log(data);
   };
   return (
     <AuthCard title={"Sign Up"}>
