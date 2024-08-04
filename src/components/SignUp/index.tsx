@@ -19,7 +19,7 @@ interface InputProps {
   register: UseFormRegister<FieldValues>;
   type: string;
 }
-const PasswordInput: React.FC<InputProps> = ({ register, type }) => {
+export const PasswordInput: React.FC<InputProps> = ({ register, type }) => {
   const [showPassword, setShowPassword] = useState(false);
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -55,7 +55,7 @@ const PasswordInput: React.FC<InputProps> = ({ register, type }) => {
   );
 };
 
-const SignUpForm: React.FC = () => {
+const AppForm: React.FC = () => {
   const { register, handleSubmit } = useForm();
   const submit = (data: FieldValues) => {
     console.log(data);
@@ -93,7 +93,7 @@ const SignUpForm: React.FC = () => {
     </form>
   );
 };
-const SignUp: React.FC = () => {
+const AuthCard: React.FC = () => {
   return (
     <Container
       maxWidth={"md"}
@@ -117,10 +117,10 @@ const SignUp: React.FC = () => {
         >
           Sign Up
         </Typography>
-        <SignUpForm />
+        <AppForm />
       </Paper>
     </Container>
   );
 };
 
-export default SignUp;
+export default AuthCard;
